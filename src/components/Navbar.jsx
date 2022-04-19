@@ -2,8 +2,9 @@ import {
   AppBar,
   Avatar,
   Badge,
-  Box,
   InputBase,
+  Menu,
+  MenuItem,
   styled,
   Toolbar,
   Typography,
@@ -48,6 +49,7 @@ const SmallScreenIconContainer = styled("div")(({ theme }) => ({
 }));
 
 function Navbar() {
+  const [open, setOpen] = React.useState(false);
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -66,11 +68,12 @@ function Navbar() {
             <NotificationsIcon />
           </Badge>
           <Avatar
+            onClick={(e) => setOpen(true)}
             sx={{ width: 30, height: 30 }}
             src="https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2022/04/17/1505277-1377468-kgf-chapter-2-yash.jpg?itok=1vNZMCsJ"
           />
         </IconContainer>
-        <SmallScreenIconContainer>
+        <SmallScreenIconContainer onClick={(e) => setOpen(true)}>
           <Avatar
             sx={{ width: 30, height: 30 }}
             src="https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2022/04/17/1505277-1377468-kgf-chapter-2-yash.jpg?itok=1vNZMCsJ"
@@ -78,6 +81,24 @@ function Navbar() {
           <Typography variant="span">Yash</Typography>
         </SmallScreenIconContainer>
       </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={open}
+        onClose={(e) => setOpen(false)}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+      >
+        <MenuItem> Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 }
