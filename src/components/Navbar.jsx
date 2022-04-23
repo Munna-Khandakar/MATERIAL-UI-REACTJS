@@ -22,7 +22,7 @@ const StyledToolbar = styled(Toolbar)({
 
 // customized searchbar
 const Search = styled("div")(({ theme }) => ({
-  backgroundColor: "white",
+  // backgroundColor: "white",
   padding: "0 10px",
   borderRadius: theme.shape.borderRadius,
   width: "40%",
@@ -54,7 +54,7 @@ function Navbar() {
     <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          KGF
+          Imamul Huda
         </Typography>
         <WebhookIcon sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
@@ -70,13 +70,13 @@ function Navbar() {
           <Avatar
             onClick={(e) => setOpen(true)}
             sx={{ width: 30, height: 30 }}
-            src="https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2022/04/17/1505277-1377468-kgf-chapter-2-yash.jpg?itok=1vNZMCsJ"
+            src="https://scontent.fdac80-1.fna.fbcdn.net/v/t1.6435-9/92946761_2668531753468236_649550104860033024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeENNVpIsljn6IXwx3SzrvtQDPrNgjARkZwM-s2CMBGRnFnzlafZfW5iiSrMrrhRC6KU8EaZF0fAFzSOuLG3cbn8&_nc_ohc=kUfkGStNaxwAX--VHbJ&_nc_ht=scontent.fdac80-1.fna&oh=00_AT-XO7s1EgoWtfuJbzmt3BYOc0mtFHHS9YgCNu_ED5mpYQ&oe=6288994C"
           />
         </IconContainer>
         <SmallScreenIconContainer onClick={(e) => setOpen(true)}>
           <Avatar
             sx={{ width: 30, height: 30 }}
-            src="https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2022/04/17/1505277-1377468-kgf-chapter-2-yash.jpg?itok=1vNZMCsJ"
+            src="https://scontent.fdac80-1.fna.fbcdn.net/v/t1.6435-9/92946761_2668531753468236_649550104860033024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeENNVpIsljn6IXwx3SzrvtQDPrNgjARkZwM-s2CMBGRnFnzlafZfW5iiSrMrrhRC6KU8EaZF0fAFzSOuLG3cbn8&_nc_ohc=kUfkGStNaxwAX--VHbJ&_nc_ht=scontent.fdac80-1.fna&oh=00_AT-XO7s1EgoWtfuJbzmt3BYOc0mtFHHS9YgCNu_ED5mpYQ&oe=6288994C"
           />
           <Typography variant="span">Yash</Typography>
         </SmallScreenIconContainer>
